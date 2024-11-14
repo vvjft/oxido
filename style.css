@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
 body {
-    background-color: #131316;
-    color: #ffffff;
+    background-color: #f5f5dc; /* Creamy background color */
+    color: #333333; /* Darker text color for better contrast */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -26,10 +27,38 @@ section{
     filter: blur(0);
     transform: translateX(0);
 }
-
-p {
-    max-width: 600px; /* Limit the width of paragraphs */
-    line-height: 1.6; /* Increase line height */
-    padding: 0 20px; /* Add padding around the text */
-    text-align: justify; /* Justify the text */
-}
+ 
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 80%; 
+    max-width: 1200px;
+  }
+  
+  .text-content {
+    width: 50%;
+    font-size: 1.2em;
+  }
+  
+  .image-content {
+    width: 50%;
+    text-align: center; 
+  }
+  
+  .image-content img {
+    max-width: 110%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text-content, .image-content {
+      width: 100%;
+    }
+  }
+  
+  
