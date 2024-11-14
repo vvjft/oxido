@@ -58,5 +58,6 @@ Adds interactivity to the HTML document. It includes a function to toggle the vi
 4. Additionally, you can paste the content of the created html file into `podglad.html` in order to display the article in predefined template.
 
 The video of example usege may not work in Firefox browser.
+
 https://github.com/user-attachments/assets/ce146a55-11cd-4ede-9c15-14ddda51d82e
 
