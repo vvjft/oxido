@@ -24,11 +24,22 @@ messages=[
     {"role": "system", "content": "You are an assistant that can convert text into HTML documents."},
     {
         "role": "user", 
-        "content": f"""Please convert the following text into an HTML document:\n\n{text}. 
-        Return only the code between <body> and </body> tags (do not innclude <body> tags as well). 
+        "content": f"""
+        Please convert the the attached text into an HTML document with the following requirements:
+        Detect headers for longer parts of the text (which can have more than one pargraph). Split fragments of the text into <section> tags with a `class=hidden`. 
+        Mind the footnotes and add them at the end of the article.
+
         Try to find appropriate places for images in the text and add <img> tags with atribute `src=\"image_placeholder.jpg\"` in those places. 
         Add attribute `alt` to each image with a prompt instruction which we can later use to generate those graphics. For example: \"IMAGE 1: Generate an image of a voice assistant\".
         Use <br>, <center> and <em> tags for caption of the images (avoid simple statements: "Ilustration of..."). Center the images as well. Scale the images to 512x512.
+
+        Return only the code between <body> and </body> tags (do not include <body> tags as well). 
+
+        Create one image per section.
+
+        Do not use any CSS or JavaScript in the document.
+
+        The attached text is the following: \n\n{text}
         """
     }
 ]
