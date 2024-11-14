@@ -26,13 +26,19 @@ messages=[
         "role": "user", 
         "content": f"""
         Please convert the the attached text into an HTML document with the following requirements:
-        Detect headers for longer parts of the text (which can have more than one pargraph). Split fragments of the text into <section> tags with a `class=hidden`. 
-        Mind the footnotes and add them at the end of the article.
 
-        Within each section wrap text into <div> with a class <text-content> and <image-content> for images. Wrap both text and images into <div> with a class <content-wrapper>.
+        Detect headers for longer parts of the text (which can have more than one pargraph). 
+        Mind the footnote and leave it simply in a <footnote> tag.
+        Split the rest fragments of the text into <section> tags with a `class=hidden`. 
+        
+        Within each section wrap text into <div> with a class <text-content> and <image-content> for images. 
+        Wrap both text and images into <div> with a class <content-wrapper>.
+        
         Add <img> tags with atribute `src=\"image_placeholder.jpg\"` in those places. 
-        Add attribute `alt` to each image with a prompt instruction which we can later use to generate those graphics. For example: \"IMAGE 1: Generate an image of a voice assistant\".
-        Use <br>, and <em> tags for caption of the images (avoid simple statements: "Ilustration of..."). Scale the images to 512x512.
+        Use <br>, and <em> tags for Polish captions of the images (be creative; avoid using simple caption as "Illustation of..."; do not use the dot at the end of the caption). 
+        Scale the images to 512x512.
+        Add attribute `alt` to each image with a prompt instruction which we can later use to generate those graphics. 
+        For example: \"IMAGE 1: Generate an image of a voice assistant\". Write the prompts accordingly to the caption. Signify in the prompts to avoid using text in the image.
 
         Return only the code between <body> and </body> tags (do not include <body> tags as well). 
 

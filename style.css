@@ -13,6 +13,7 @@ section{
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    margin-bottom: 10px;
 }
 
 .hidden {
